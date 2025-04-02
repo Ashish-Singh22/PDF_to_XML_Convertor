@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser')
 
 const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
+    origin : "https://pdf-to-xml-convertor-dath.vercel.app",
     credentials : true
 }))
 app.use(express.json({limit : '10mb'}));
