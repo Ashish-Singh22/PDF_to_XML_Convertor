@@ -72,7 +72,7 @@ const History = ()=>{
 
     try {
       const uploadPdfCloudinary = await uploadPDF(file);
-      setPdfUrl(uploadPdfCloudinary.url);
+      setPdfUrl(uploadPdfCloudinary.secure_url);
 
       const formData = new FormData();
       formData.append("file", file);
@@ -149,7 +149,7 @@ const History = ()=>{
 
     try {
       const uploadPdfCloudinary = await uploadPDF(file);
-      setPdfUrl(uploadPdfCloudinary.url);
+      setPdfUrl(uploadPdfCloudinary.secure_url);
 
       const formData = new FormData();
       formData.append("file", file);

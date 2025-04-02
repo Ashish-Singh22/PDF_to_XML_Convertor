@@ -19,11 +19,7 @@ const uploadPDF = async (pdfFile) => {
 
         const data = await response.json();
         console.log("Cloudinary Response:", data);
-
-        // Ensure HTTPS by replacing HTTP if needed
-        const secureUrl = data.secure_url || data.url.replace("http://", "https://");
-        
-        return secureUrl; // Return only the HTTPS link
+        return data; // Cloudinary URL details
 
     } catch (error) {
         console.error("Upload Error (Network Issue?):", error);
