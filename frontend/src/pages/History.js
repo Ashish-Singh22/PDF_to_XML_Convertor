@@ -108,7 +108,7 @@ const History = ()=>{
 
           const historyData = {
             userId: user?._id,
-            pdfLink: uploadPdfCloudinary.url,
+            pdfLink: uploadPdfCloudinary.secure_url,
             code: xmlResponse.data,
             fileName: file?.name,
             type : "xml"
@@ -185,7 +185,7 @@ const History = ()=>{
 
           const historyData = {
             userId: user?._id,
-            pdfLink: uploadPdfCloudinary.url,
+            pdfLink: uploadPdfCloudinary.secure_url,
             code: xmlResponse.data,
             fileName: file?.name,
             type : "html"
