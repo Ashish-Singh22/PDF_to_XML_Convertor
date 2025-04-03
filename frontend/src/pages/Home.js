@@ -31,7 +31,7 @@ const Home = () => {
 
     try {
       const uploadPdfCloudinary = await uploadPDF(file);
-      setPdfUrl(uploadPdfCloudinary.url);
+      setPdfUrl(uploadPdfCloudinary.secure_url);
 
       const formData = new FormData();
       formData.append("file", file);
@@ -67,7 +67,7 @@ const Home = () => {
 
           const historyData = {
             userId: user?._id,
-            pdfLink: uploadPdfCloudinary.url,
+            pdfLink: uploadPdfCloudinary.secure_url,
             code: xmlResponse.data,
             fileName: file?.name,
             type : "xml"
@@ -108,7 +108,7 @@ const Home = () => {
 
     try {
       const uploadPdfCloudinary = await uploadPDF(file);
-      setPdfUrl(uploadPdfCloudinary.url);
+      setPdfUrl(uploadPdfCloudinary.secure_url);
 
       const formData = new FormData();
       formData.append("file", file);
@@ -144,7 +144,7 @@ const Home = () => {
 
           const historyData = {
             userId: user?._id,
-            pdfLink: uploadPdfCloudinary.url,
+            pdfLink: uploadPdfCloudinary.secure_url,
             code: xmlResponse.data,
             fileName: file?.name,
             type : "html"
